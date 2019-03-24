@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Llamador de Turnos</title>
+</head>
+<body>
+  <h1>Bienvenide al Turnero de Rentas Municipal</h1>
+  <p>Para empezar, selecciones su puesto de servicio en el siguiente menu:</p>
+  <select id="pos">
+    <option value="01">Box-01</option>
+    <option value="02">Box-02</option>
+    <option value="03">Box-03</option>
+    <option value="04">Box-04</option>
+    <option value="05">Box-05</option>
+    <option value="06">Box-06</option>
+    <option value="07">Box-07</option>
+    <option value="08">Box-08</option>
+    <option value="09">Box-09</option>
+    <option value="10">Box-10</option>
+  </select>
+  <p>Turnos atendidos: </p>
+  <ul id="turnos_atendidos"></ul>
+  <p>Turnos abandonados: </p>
+  <ul id="turnos_abandonados"></ul>
+  <button onclick="CallNext()">Llamar Siguiente</button>
+  <button onclick="RecallLast()">Rellamar Anterior</button>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io()
+    function CallNext() {
+      console.log('Pase el Siguiente')
+      var pos = document.getElementById('pos').value
+      console.log(pos)
+      socket.emit('call', pos)
+    }
+    function RecallLast() {
+      console.log('Por aqui señor')
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Emisor de Turnos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>Bienvenido a la Direccion General de Rentas Municipal</h1>
+  <p>Para sacar un turno, por favor, presione el siguiente boton:</p>
+  <button onclick="emitirComun()">Turno Comun</button>
+  <button onclick="emitirEspecial()">Turno Especial</button>
+  <script>
+    function emitirComun() {
+      console.log('Se emitio un nuevo turno.')      
+    }
+    function emitirEspecial() {
+      console.log('Se emitio un turno especial.')
+    }
+  </script>
+</body>
+</html>

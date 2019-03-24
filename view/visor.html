@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Visor de Turnos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>Bienvenidos a la Direccion General de Rentas Municipal</h1>
+  <h2>Llamando: </h2>
+  <ul id="calling"></ul>
+  <h2>Anteriores:</h2>
+  <ul id="latest"></ul>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io()
+    socket.on('call', function(msg) {
+      console.log('msg')
+      var li = document.createElement("LI")
+      var turno = document.createTextNode(msg)
+      li.appendChild(turno)
+      document.getElementById("calling").appendChild(li)
+    })
+  </script>
+</body>
+</html>

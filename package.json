@@ -1,0 +1,23 @@
+{
+  "name": "turnero",
+  "version": "1.0.0",
+  "description": "Un simple turnero para programar en un solo fin de semana.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pato045/Turnero.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pato045/Turnero/issues"
+  },
+  "homepage": "https://github.com/Pato045/Turnero#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
