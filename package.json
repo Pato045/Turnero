@@ -1,6 +1,7 @@
 {
   "name": "turnero",
   "version": "1.0.0",
+  "private": true,
   "description": "Un simple turnero para programar en un solo fin de semana.",
   "main": "index.js",
   "scripts": {
